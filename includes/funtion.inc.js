@@ -60,13 +60,49 @@ function deRequire(elClass) {
     }
 }
 
-// Add Family Member
-// function duplicate() {
-//     var parent = document.getElementsByClassName('family-list');
-//     var original = document.getElementById('duplicater');
-//     var clone = original.cloneNode(true);
-//     original.parentNode.appendChild(clone);
-// }
+function updateFamily() {
+    var parent = document.getElementById('newRow');
+    var tr = document.createElement('tr');
+    tr.setAttribute("id", "duplicaterow");
+    var td1 = document.createElement('td');
+    var td2 = document.createElement('td');
+    var td3 = document.createElement('td');
+    var td4 = document.createElement('td');
+    var td5 = document.createElement('td');
+    var inputName = document.createElement('input');
+    inputName.setAttribute("class", "form-control");
+    inputName.setAttribute("type", "text");
+    inputName.setAttribute("name", "relativeName[]");
+    var inputAge = document.createElement('input');
+    inputAge.setAttribute("class", "form-control");
+    inputAge.setAttribute("type", "text");
+    inputAge.setAttribute("name", "relativeAge[]");
+    var inputAddress = document.createElement('input');
+    inputAddress.setAttribute("class", "form-control");
+    inputAddress.setAttribute("type", "text");
+    inputAddress.setAttribute("name", "relativeAddress[]");
+    var inputContact = document.createElement('input');
+    inputContact.setAttribute("class", "form-control");
+    inputContact.setAttribute("type", "text");
+    inputContact.setAttribute("name", "relativeContact[]");
+    var deleteButton = document.createElement('button');
+    deleteButton.setAttribute("class", "btn btn-danger delete");
+    deleteButton.setAttribute("type", "button");
+    deleteButton.setAttribute("onclick", "deleteRow(this);");
+    deleteButton.textContent = "Delete";
+    td1.appendChild(inputName);
+    td2.appendChild(inputAge);
+    td3.appendChild(inputAddress);
+    td4.appendChild(inputContact);
+    td5.appendChild(deleteButton);
+    tr.appendChild(td1);
+    tr.appendChild(td2);
+    tr.appendChild(td3);
+    tr.appendChild(td4);
+    tr.appendChild(td5);
+    parent.appendChild(tr);
+}
+
 function duplicate() {
     var parent = document.getElementById('new');
     var div = document.createElement('div');
@@ -151,48 +187,6 @@ function deleteRow(button) {
     $(button).parent().closest('tr').remove();
 }
 
-function updateFamily() {
-    var parent = document.getElementById('new');
-    var tr = document.createElement('tr');
-    tr.setAttribute("id", "duplicaterow");
-    var td1 = document.createElement('td');
-    var td2 = document.createElement('td');
-    var td3 = document.createElement('td');
-    var td4 = document.createElement('td');
-    var td5 = document.createElement('td');
-    var inputName = document.createElement('input');
-    inputName.setAttribute("class", "form-control");
-    inputName.setAttribute("type", "text");
-    inputName.setAttribute("name", "relativeName[]");
-    var inputAge = document.createElement('input');
-    inputAge.setAttribute("class", "form-control");
-    inputAge.setAttribute("type", "text");
-    inputAge.setAttribute("name", "relativeAge[]");
-    var inputAddress = document.createElement('input');
-    inputAddress.setAttribute("class", "form-control");
-    inputAddress.setAttribute("type", "text");
-    inputAddress.setAttribute("name", "relativeAddress[]");
-    var inputContact = document.createElement('input');
-    inputContact.setAttribute("class", "form-control");
-    inputContact.setAttribute("type", "text");
-    inputContact.setAttribute("name", "relativeContact[]");
-    var deleteButton = document.createElement('button');
-    deleteButton.setAttribute("class", "btn btn-danger delete");
-    deleteButton.setAttribute("type", "button");
-    deleteButton.setAttribute("onclick", "deleteRow(this);");
-    deleteButton.textContent = "Delete";
-    td1.appendChild(inputName);
-    td2.appendChild(inputAge);
-    td3.appendChild(inputAddress);
-    td4.appendChild(inputContact);
-    td5.appendChild(deleteButton);
-    tr.appendChild(td1);
-    tr.appendChild(td2);
-    tr.appendChild(td3);
-    tr.appendChild(td4);
-    tr.appendChild(td5);
-    parent.appendChild(tr);
-}
 // Prohibit Special Characters 
 function alpha(e) {
     var k;
