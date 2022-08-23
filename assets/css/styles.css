@@ -146,3 +146,9 @@ a{
   width: 365px; 
   overflow: hidden;
 }
+
+@media (max-width: 576px) {
+    #cswd-header {
+        display: none;
+    }
+}

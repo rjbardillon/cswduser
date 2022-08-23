@@ -15,10 +15,10 @@ if (isset($_POST['pwd-register'])) {
         $pwdNumber = NULL;
     }
     $dateApplied = date('Y-m-d', strtotime($_POST['dateApplied']));
-    $pwdLastName = $_SESSION['last_name'];
-    $pwdFirstName = $_SESSION['first_name'];
-    $pwdMiddleName = $_SESSION['middle_name'];
-    $pwdSuffix = $_SESSION['suffix'];
+    $pwdLastName = $_POST['lastName'];
+    $pwdFirstName = $_POST['firstName'];
+    $pwdMiddleName = $_POST['middleName'];
+    $pwdSuffix = $_POST['suffix'];
     if (isset($_POST['typeOfDisability'])) {
         $str = $_POST['typeOfDisability'];
         $typeOfDisability = implode (",", $str);
@@ -72,7 +72,7 @@ if (isset($_POST['pwd-register'])) {
     } else {
         $mobileNumber = NULL;
     }
-    $email = $_SESSION['email'];
+    $email = $_POST['email'];
     $dateOfBirth = date('Y-m-d', strtotime($_POST['dob']));
     $sex = $_POST['sex'];
     $religion = $_POST['religion'];

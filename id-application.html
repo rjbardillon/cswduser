@@ -464,7 +464,7 @@
                                     <?php
                                         require_once 'includes/dbh.inc.php'; 
                                         require_once 'includes/functions.inc.php';
-                                            echo '<input class="form-control" type="text" name="email" id="email" value = "'; echo ($userData['email']); echo '" disabled>';
+                                            echo '<input class="form-control" type="text" name="email" id="email" value = "'; echo ($userData['email']); echo '">';
                                     ?>
                                 </div>
                             </div>
@@ -472,7 +472,7 @@
                             <div class="row">
                                 <div class="col border1">
                                     <b class="required">DATE OF BIRTH (mm/dd/yyyy)</b><br>
-                                    <input type="date" name="dob" id="dob" required>
+                                    <input class="form-control" type="date" name="dob" id="dob" required>
                                 </div>
                                 <div class="col col-md-auto border1">
                                     <b class="required">SEX</b>
