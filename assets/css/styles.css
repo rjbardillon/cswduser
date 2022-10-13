@@ -86,10 +86,6 @@ hr {
     display: none;
 }
 
-input {
-  margin: 5px;
-}
-
 .required:after {
     content:" *";
     color: red;
@@ -103,48 +99,6 @@ a{
 
 .disableDiv {
   pointer-events: none;
-}
-
-#partitioned1 {
-  padding-left: 15px;
-  letter-spacing: 42px;
-  border: 0;
-  background: transparent;
-  background-image: linear-gradient(to left, black 70%, rgba(255, 255, 255, 0) 0%);
-  background-position: bottom;
-  background-size: 50px 1px;
-  background-repeat: repeat-x;
-  background-position-x: 35px;
-  width: 90px;
-  min-width: 90px;
-}
-
-#partitioned {
-  padding-left: 15px;
-  letter-spacing: 42px;
-  border: 0;
-  background: transparent;
-  background-image: linear-gradient(to left, black 70%, rgba(255, 255, 255, 0) 0%);
-  background-position: bottom;
-  background-size: 50px 1px;
-  background-repeat: repeat-x;
-  background-position-x: 35px;
-  width: 300px;
-  min-width: 300px;
-}
-
-#partitioned:focus, #partitioned1:focus {
-    outline: none
-}
-
-#divInner{
-    left: 0;
-    position: sticky;
-}
-
-#divOuter{
-  width: 365px; 
-  overflow: hidden;
 }
 
 @media (max-width: 576px) {
