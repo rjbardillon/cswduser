@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 13, 2022 at 06:18 AM
+-- Generation Time: Oct 17, 2022 at 09:03 AM
 -- Server version: 10.4.20-MariaDB
 -- PHP Version: 8.0.8
 
@@ -48,7 +48,9 @@ INSERT INTO `administrator` (`id`, `admin_type`, `barangay`, `username`, `first_
 (3, 'Main Administrator', 'City Hall', 'adminrrivera', 'Rhodemil Zeth', 'Rivera', 'zeth@gmail.com', '$2y$10$OTYHIuEJrgLRZ3dXv07eGe9f3qos8MzMEGPFWMPa42DVVgLfLDl4y'),
 (4, 'Main Administrator', 'City Hall', 'admintocampo', 'Tresha', 'Ocampo', 'tresha@gmail.com', '$2y$10$RkNRS/OcLJktAxIw2DK27eky8HsbJJmGRg0nWlY8JdxGLah0YznKi'),
 (5, 'Main Administrator', 'City Hall', 'adminjulanday', 'Jules Jacob', 'Ulanday', 'jules.ulanday@gmail.com', '$2y$10$w1BdpAXZY/USfvDu2fdwc.nOeU/MdmTpsy3JIlQnKqe7K3g0VjWSm'),
-(6, 'Main Administrator', 'City Hall', 'admincurmatam', 'Clarence', 'Urmatam', 'clarence@gmail.com', '$2y$10$3bQiV6swhl.AMqMxJoh3uOtqTPRlp2PmBK/pMx3hYTIihfZPP0vte');
+(6, 'Main Administrator', 'City Hall', 'admincurmatam', 'Clarence', 'Urmatam', 'clarence@gmail.com', '$2y$10$3bQiV6swhl.AMqMxJoh3uOtqTPRlp2PmBK/pMx3hYTIihfZPP0vte'),
+(7, 'Solo Parent Administrator', 'City Hall', 'adminljames', 'Lebron', 'James', 'lebron.james@ymail.com', '$2y$10$oizcq8nx0f8LrN/9nQTNGOlXk9viKORa/AkqpaD69Io.ULuKuNctO'),
+(8, 'Solo Parent Administrator', 'City Hall', 'adminkbryant', 'Kobe', 'Bryant', 'kobe@gmail.com', '$2y$10$wJrS5UcJtf/U5p15mrC7dOFbsgK6lC4xvo70aBr.6uPqrjSdCwpdy');
 
 -- --------------------------------------------------------
 
@@ -281,7 +283,7 @@ CREATE TABLE `solo_parent_data` (
 --
 
 INSERT INTO `solo_parent_data` (`id`, `username`, `solo_parent_name`, `age`, `sex`, `date_of_birth`, `place_of_birth`, `address`, `barangay`, `educ_attainment`, `occupation`, `income`, `fam_income`, `tenurial`, `religion`, `contact_number`, `marital_status`, `classification_incidence`, `classification_when`, `problems`, `family_resources`, `date_applied`, `status`, `application_date`, `expiration_date`) VALUES
-(2, 'hehe', 'Kobe', '49', 'Male', '1974-09-18', 'Santa Rosa', 'Santa Rosa', 'Balibago', 'College', 'N/A', '0.00', '0.00', '3', 'Catholic', '09565656565656', 'Single', 'N/A', 'N/A', 'N/A', 'N/A', '2022-09-26', 'Approved', '2022-09-26 06:24:43', '2025-09-26');
+(2, 'hehe', 'Kobe', '49', 'Male', '1974-09-18', 'Santa Rosa', 'Santa Rosa', 'Balibago', 'College', 'N/A', '0.00', '0.00', '3', 'Catholic', '09565656565656', 'Single', 'N/A', 'N/A', 'N/A', 'N/A', '2022-09-26', 'Approved', '2022-09-26 06:24:43', '2025-10-17');
 
 -- --------------------------------------------------------
 
@@ -406,126 +408,6 @@ ALTER TABLE `media`
   ADD UNIQUE KEY `username` (`username`);
 
 --
--- Indexes for table `pma__bookmark`
---
-ALTER TABLE `pma__bookmark`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `pma__central_columns`
---
-ALTER TABLE `pma__central_columns`
-  ADD PRIMARY KEY (`db_name`,`col_name`);
-
---
--- Indexes for table `pma__column_info`
---
-ALTER TABLE `pma__column_info`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `db_name` (`db_name`,`table_name`,`column_name`);
-
---
--- Indexes for table `pma__designer_settings`
---
-ALTER TABLE `pma__designer_settings`
-  ADD PRIMARY KEY (`username`);
-
---
--- Indexes for table `pma__export_templates`
---
-ALTER TABLE `pma__export_templates`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `u_user_type_template` (`username`,`export_type`,`template_name`);
-
---
--- Indexes for table `pma__favorite`
---
-ALTER TABLE `pma__favorite`
-  ADD PRIMARY KEY (`username`);
-
---
--- Indexes for table `pma__history`
---
-ALTER TABLE `pma__history`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `username` (`username`,`db`,`table`,`timevalue`);
-
---
--- Indexes for table `pma__navigationhiding`
---
-ALTER TABLE `pma__navigationhiding`
-  ADD PRIMARY KEY (`username`,`item_name`,`item_type`,`db_name`,`table_name`);
-
---
--- Indexes for table `pma__pdf_pages`
---
-ALTER TABLE `pma__pdf_pages`
-  ADD PRIMARY KEY (`page_nr`),
-  ADD KEY `db_name` (`db_name`);
-
---
--- Indexes for table `pma__recent`
---
-ALTER TABLE `pma__recent`
-  ADD PRIMARY KEY (`username`);
-
---
--- Indexes for table `pma__relation`
---
-ALTER TABLE `pma__relation`
-  ADD PRIMARY KEY (`master_db`,`master_table`,`master_field`),
-  ADD KEY `foreign_field` (`foreign_db`,`foreign_table`);
-
---
--- Indexes for table `pma__savedsearches`
---
-ALTER TABLE `pma__savedsearches`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `u_savedsearches_username_dbname` (`username`,`db_name`,`search_name`);
-
---
--- Indexes for table `pma__table_coords`
---
-ALTER TABLE `pma__table_coords`
-  ADD PRIMARY KEY (`db_name`,`table_name`,`pdf_page_number`);
-
---
--- Indexes for table `pma__table_info`
---
-ALTER TABLE `pma__table_info`
-  ADD PRIMARY KEY (`db_name`,`table_name`);
-
---
--- Indexes for table `pma__table_uiprefs`
---
-ALTER TABLE `pma__table_uiprefs`
-  ADD PRIMARY KEY (`username`,`db_name`,`table_name`);
-
---
--- Indexes for table `pma__tracking`
---
-ALTER TABLE `pma__tracking`
-  ADD PRIMARY KEY (`db_name`,`table_name`,`version`);
-
---
--- Indexes for table `pma__userconfig`
---
-ALTER TABLE `pma__userconfig`
-  ADD PRIMARY KEY (`username`);
-
---
--- Indexes for table `pma__usergroups`
---
-ALTER TABLE `pma__usergroups`
-  ADD PRIMARY KEY (`usergroup`,`tab`,`allowed`);
-
---
--- Indexes for table `pma__users`
---
-ALTER TABLE `pma__users`
-  ADD PRIMARY KEY (`username`,`usergroup`);
-
---
 -- Indexes for table `pwdreset`
 --
 ALTER TABLE `pwdreset`
@@ -555,8 +437,7 @@ ALTER TABLE `senior_citizen_family_composition`
 -- Indexes for table `solo_parent_data`
 --
 ALTER TABLE `solo_parent_data`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `username` (`username`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `solo_parent_family_composition`
@@ -590,37 +471,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `administrator`
 --
 ALTER TABLE `administrator`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
-
---
--- AUTO_INCREMENT for table `announcement`
---
-ALTER TABLE `announcement`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
---
--- AUTO_INCREMENT for table `media`
---
-ALTER TABLE `media`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-  
---
--- AUTO_INCREMENT for table `pwdreset`
---
-ALTER TABLE `pwdreset`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
---
--- AUTO_INCREMENT for table `pwd_data`
---
-ALTER TABLE `pwd_data`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
---
--- AUTO_INCREMENT for table `senior_citizen_data`
---
-ALTER TABLE `senior_citizen_data`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `senior_citizen_family_composition`
